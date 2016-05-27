@@ -5,10 +5,9 @@ require 'collector/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'collector'
-  spec.version       = Collector::VERSION
+  spec.version       = Version::VERSION
   spec.authors       = ['Justin Commu']
   spec.email         = ['Justin.Commu@loblaw.ca']
-
   spec.summary       = 'Logging tool which accepts Hashes, Arrays, and Strings'
   spec.description   = 'Use this library effectively log different data types'
   spec.homepage      = 'https://loblawdigital.ca'
