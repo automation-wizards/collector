@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'collector/version'
+require 'magic_logger/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'collector'
+  spec.name          = 'magic_logger'
   spec.version       = Version::VERSION
   spec.authors       = ['Justin Commu']
   spec.email         = ['Justin.Commu@loblaw.ca']

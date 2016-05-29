@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class Collector
+class MagicLogger
 
     @formatted = {}
     @raw = {}

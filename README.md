@@ -1,13 +1,13 @@
 # WebTest
 
-Welcome to Collector!
+Welcome to magic_logger!
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'collector'
+gem 'magic_logger'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install collector
+    $ gem install magic_logger
 
 ## Usage
 
