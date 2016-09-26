@@ -17,11 +17,19 @@ class MagicLogger
         @raw.key?(title) ? @raw[title] << "\n #{entry}" : @raw[title] = entry.to_s
       end
 
-      def process
-        @formatted = @raw.map { |k, v| "\n#{k}:\n #{v}" }.join("\n")
+      def clear
         @raw.clear
-        @formatted
       end
+
+      def pretty_text
+        @raw.map { |k, v| "\n#{k}:\n #{v}" }.join("\n")
+      end
+
+      def process
+        warn "[DEPRECATION] `process` is deprecated.  Please use `pretty_text` instead. "
+        pretty_text
+      end
+
 
       def format_hash(hash)
         hash.map { |k, v| "#{k}: #{v}" }.join("\n ")
