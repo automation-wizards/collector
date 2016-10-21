@@ -9,10 +9,11 @@ class MagicLogger
       attr_accessor :raw, :formatted
 
       def log(title, value)
-        entry = case value
-                  when Hash  then format_hash(value)
-                  when Array then format_array(value)
-                  else value
+        safe_value = value.clone
+        entry = case safe_value
+                  when Hash  then format_hash(safe_value)
+                  when Array then format_array(safe_value)
+                  else safe_value
                 end
         @raw.key?(title) ? @raw[title] << "\n #{entry}" : @raw[title] = entry.to_s
       end
