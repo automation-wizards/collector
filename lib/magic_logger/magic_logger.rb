@@ -9,7 +9,7 @@ class MagicLogger
       attr_accessor :raw, :formatted
 
       def log(title, value)
-        safe_value = value.clone
+        safe_value = value.clone rescue value
         entry = case safe_value
                   when Hash  then format_hash(safe_value)
                   when Array then format_array(safe_value)
